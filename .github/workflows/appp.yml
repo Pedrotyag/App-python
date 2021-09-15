@@ -1,12 +1,14 @@
+
 name: Build
 on:
   push:
 
-# Build job. Builds app for Android with Buildozer
 jobs:
-  Explore-GitHub-Actions:
+  # Build job. Builds app for Android with Buildozer
+  build-android:
+    name: Build for Android
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
