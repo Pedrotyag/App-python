@@ -1,14 +1,12 @@
-from setuptools import setup
+import kivy
+from kivy.app import App
+from kivy.uix.button import Button
+
+#kivy.require("1.10.1")
+
+class TestApp(App):
+    def build(self):
+        return Button(text="Hello World")
 
 
-setup(
-    name='tictactoe',
-    version='0.0.1',
-    packages=['tictactoe'],
-    options={
-        'app': {
-            'formal_name': 'TicTacToe',
-            'bundle': 'org.pybee.demo',
-        }
-    }
-)
+TestApp().run()
